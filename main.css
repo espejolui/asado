@@ -6,25 +6,24 @@
 
 body {
     font-family: "Helvetica Neue", sans-serif;
-    background-color: #111;
+    background-color: #484848;
     color: #fff;
-    display: flex;
+    display: grid;
+    min-height: 60vh;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    text-align: center;
 }
 
-section {
-    display: flex; /* Usamos flexbox para centrar el contenido verticalmente */
+#card_section {
+    display: flex; 
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espacio entre el h1 y el contenedor */
+    gap: 20px;
 }
 
 h1 {
     font-size: 2rem;
-    color: #fff;
-    text-align: center;
 }
 
 .main-container {
@@ -35,8 +34,8 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-        "red red red yellow"
-        "red red red yellow"
+        "red red red red"
+        "red red red red"
         "blue green green green"
         "blue green green green";
 }
@@ -56,7 +55,7 @@ h1 {
         box-shadow 0.3s ease;
 }
 
-/* Asignamos cada tarjeta a su área en la cuadrícula */
+/* Asigno cada tarjeta a su área en la cuadrícula */
 .red {
     background-color: #ff4d5e;
     grid-area: red;
@@ -86,7 +85,6 @@ h2 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 5px;
-    text-align: center;
 }
 
 p {
@@ -96,28 +94,4 @@ p {
 .sub {
     font-size: 18px;
     font-weight: 700;
-}
-
-/* Estilos para el iframe */
-.date.blue {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 15px;
-    padding-bottom: 0; /* Ajuste para que el mapa ocupe todo el espacio inferior */
-}
-
-.date.blue .sub {
-    flex-shrink: 0; /* Evita que el título se encoja */
-    margin-bottom: 10px; /* Espacio entre el título y el mapa */
-}
-
-.date iframe {
-    flex-grow: 1; /* El iframe se estira para llenar el espacio */
-    width: 100%;
-    height: 100%;
-    border: none; /* Elimina cualquier borde residual del iframe */
-    border-radius: 0 0 8px 8px; /* Bordes redondeados solo en la parte inferior para que coincida con la tarjeta */
-    filter: grayscale(100%) invert(90%); /* Opcional: para que el mapa se vea más minimalista y combine con el tema oscuro */
 }
