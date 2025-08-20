@@ -18,9 +18,10 @@ const updateCountDown = () => {
 
   const format = (n) => (n < 10 ? "0" + n : n);
 
-  const countdownStr = `${format(days)} días : ${format(hours)} horas : ${format(minutes)} minutos : ${format(seconds)} segundos`;
-
-  document.getElementById("countdown").textContent = countdownStr;
+  document.getElementById("dh").textContent =
+    days + " Días " + " - " + hours + " Horas";
+  document.getElementById("ms").textContent =
+    minutes + " Minutos " + seconds + " Segundos";
 };
 setInterval(updateCountDown, 1000);
 updateCountDown();

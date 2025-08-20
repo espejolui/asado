@@ -3,20 +3,121 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0a0a0a;
-    color: #e5e5e5;
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-    h1 {
-        text-align: center;
-        margin-top: 50px;
-    }
-    .date {
-        display: grid;
-        justify-content: center;
-        gap: 10px;
+section {
+    display: flex; /* Usamos flexbox para centrar el contenido verticalmente */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre el h1 y el contenedor */
+}
 
-        background-color: orange;
-    }
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.main-container {
+    display: grid;
+    gap: 10px;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "red red red yellow"
+        "red red red yellow"
+        "blue green green green"
+        "blue green green green";
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-weight: 300;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Asignamos cada tarjeta a su área en la cuadrícula */
+.red {
+    background-color: #ff4d5e;
+    grid-area: red;
+}
+
+.blue {
+    background-color: #3498db;
+    grid-area: blue;
+}
+
+.yellow {
+    background-color: #f1c40f;
+    grid-area: yellow;
+}
+
+.green {
+    background-color: #2ecc71;
+    grid-area: green;
+}
+
+.date:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+.sub {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Estilos para el iframe */
+.date.blue {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    padding-bottom: 0; /* Ajuste para que el mapa ocupe todo el espacio inferior */
+}
+
+.date.blue .sub {
+    flex-shrink: 0; /* Evita que el título se encoja */
+    margin-bottom: 10px; /* Espacio entre el título y el mapa */
+}
+
+.date iframe {
+    flex-grow: 1; /* El iframe se estira para llenar el espacio */
+    width: 100%;
+    height: 100%;
+    border: none; /* Elimina cualquier borde residual del iframe */
+    border-radius: 0 0 8px 8px; /* Bordes redondeados solo en la parte inferior para que coincida con la tarjeta */
+    filter: grayscale(100%) invert(90%); /* Opcional: para que el mapa se vea más minimalista y combine con el tema oscuro */
 }
