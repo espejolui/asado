@@ -16,7 +16,7 @@ body {
 }
 
 #card_section {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -94,4 +94,19 @@ p {
 .sub {
     font-size: 18px;
     font-weight: 700;
+}
+
+.iframe-container {
+    width: fit-content;
+    height: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }

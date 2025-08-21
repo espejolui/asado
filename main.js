@@ -25,18 +25,3 @@ const updateCountDown = () => {
 };
 setInterval(updateCountDown, 1000);
 updateCountDown();
-
-const peticion = fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRNxXo-S6Sw2q7e5fgKuFpZsyT2WZBT8ARFa1IMMtBdV8blsYQE6T_0poODJ4ETUjWzIlJsiOPeMIJG/pub?gid=0&single=true&output=json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error en la respuesta de la red');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log("Datos en formato JSON:", data);
-        // const primeraFila = data.values[0];
-    })
-    .catch(error => {
-        console.error('Hubo un problema con la solicitud fetch:', error);
-    });
