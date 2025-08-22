@@ -1,3 +1,5 @@
+import { list } from "./helpers/list.js";
+
 const updateCountDown = () => {
   const now = new Date();
   const targetDate = new Date(now.getFullYear(), now.getMonth(), 30, 14, 0, 0); // 30 a las 14:00
@@ -25,3 +27,13 @@ const updateCountDown = () => {
 };
 setInterval(updateCountDown, 1000);
 updateCountDown();
+
+
+const ingredients = document.getElementById('ingredients');
+
+const dta = list.map(({ingredient, value, amount, emoji }) => {
+  const p = document.createElement("p");
+  p.textContent = `${ingredient}, ${value}, ${amount}, ${emoji}`
+
+  ingredients.appendChild(p);
+});
