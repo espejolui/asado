@@ -28,12 +28,24 @@ const updateCountDown = () => {
 setInterval(updateCountDown, 1000);
 updateCountDown();
 
+const myIngredientes = () => {
+  const ingredients = document.getElementById("ingredients");
 
-const ingredients = document.getElementById('ingredients');
+  let totalSum = 0;
+  const dta = list.forEach(({ ingredient, value, quantity, unit, emoji }) => {
+    const p = document.createElement("p");
+    const sum = parseInt(quantity) * parseInt(value);
+    const sumFormat = sum.toLocaleString("es-ES");
+    totalSum += sum;
+    p.textContent = `${emoji} ${ingredient} a ${value} ${unit} x ${quantity} = ${sumFormat} `;
 
-const dta = list.map(({ingredient, value, amount, emoji }) => {
-  const p = document.createElement("p");
-  p.textContent = `${ingredient}, ${value}, ${amount}, ${emoji}`
+    ingredients.appendChild(p);
+  });
 
-  ingredients.appendChild(p);
-});
+  const total = document.createElement("p");
+  total.classList.add("total");
+  const totalSumFormat = totalSum.toLocaleString("es-ES");
+  total.textContent = "Total: " + totalSumFormat;
+  ingredients.appendChild(total);
+};
+myIngredientes();
