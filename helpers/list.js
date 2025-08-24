@@ -1,80 +1,93 @@
 export const list = [
-    {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-        emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-      {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-      {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-     {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    },
-    {
-        ingredient: "Carne",
-        value: "$18.000",
-        amount: "6 libras",
-         emoji: "🍖"
-    }
-]
+  {
+    ingredient: "Carne",
+    value: "18000",
+    quantity: "6",
+    unit: "Lb.",
+    emoji: "🍖",
+  },
+  {
+    ingredient: "Pechuga",
+    value: "12000",
+    quantity: "3",
+    unit: "Ud.",
+    emoji: "🍗",
+  },
+  {
+    ingredient: "Papa sabanera",
+    value: "5000",
+    quantity: "5",
+    unit: "Lb.",
+    emoji: "🥔",
+  },
+  {
+    ingredient: "Chorizo",
+    value: "17000",
+    quantity: "2",
+    unit: "Pq.",
+    emoji: "🥓",
+  },
+  {
+    ingredient: "Cebollin",
+    value: "6000",
+    quantity: "0.5",
+    unit: "Lb.",
+    emoji: "🧅",
+  },
+  {
+    ingredient: "Tomate Cherry",
+    value: "6000",
+    quantity: "1",
+    unit: "Lb.",
+    emoji: "🍅",
+  },
+  {
+    ingredient: "Aguacate",
+    value: "15000",
+    quantity: "5",
+    unit: "Lb.",
+    emoji: "🥑",
+  },
+  {
+    ingredient: "Tomate",
+    value: "2000",
+    quantity: "2",
+    unit: "Lb.",
+    emoji: "🍅",
+  },
+  {
+    ingredient: "Cebolla Roja",
+    value: "3000",
+    quantity: "1",
+    unit: "Lb.",
+    emoji: "🧅",
+  },
+  {
+    ingredient: "Ají",
+    value: "5000",
+    quantity: "1",
+    unit: "Pq.",
+    emoji: "🌶️",
+  },
+  {
+    ingredient: "Adobo",
+    value: "2000",
+    quantity: "1",
+    unit: "Pq.",
+    emoji: "🧂",
+  },
+  {
+    ingredient: "Platano",
+    value: "4000",
+    quantity: "2",
+    unit: "Lb.",
+    emoji: "🍌",
+  },
+  {
+    ingredient: "Chunchullo",
+    value: "16000",
+    quantity: "2",
+    unit: "Lb.",
+    emoji: "🍖",
+  },
+];
